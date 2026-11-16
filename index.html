@@ -161,11 +161,8 @@
 
         function goTelegram(productName, productPrice) {
             var message = makeMessage(productName, productPrice);
-
-            navigator.clipboard.writeText(message).then(function () {
-                alert("تم نسخ الطلب ✅\nالصقه في التليجرام");
-                window.open("https://t.me/lib4X", "_blank");
-            });
+            var link = "https://t.me/lib4X?text=" + encodeURIComponent(message);
+            window.open(link, "_blank");
         }
 
     </script>
