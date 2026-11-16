@@ -57,8 +57,8 @@
 
         .card-img {
             width: 100%;
-            height: 220px;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
             display: block;
             border-radius: 12px;
             margin-bottom: 15px;
@@ -156,33 +156,16 @@
         <img class="card-img" src="rights.jpg" alt="ملفات مدفوعة بحقوقك">
 
         <h3>ملفات مدفوعة بحقوقك</h3>
-        <div class="price">250 جنيه</div>
+        <div class="price">200 جنيه</div>
 
-        <button class="btn btn-whatsapp" onclick="goWhatsapp('ملفات مدفوعة بحقوقك', '250 جنيه')">
+        <button class="btn btn-whatsapp" onclick="goWhatsapp('ملفات مدفوعة بحقوقك', '200 جنيه')">
             اطلب واتساب ✅
         </button>
 
-        <button class="btn btn-telegram" onclick="goTelegram('ملفات مدفوعة بحقوقك', '250 جنيه')">
+        <button class="btn btn-telegram" onclick="goTelegram('ملفات مدفوعة بحقوقك', '200 جنيه')">
             اطلب تليجرام ✈️
         </button>
     </div>
 
     <script>
-        // غير الرقم ده برقم الواتساب بتاعك من غير + ولا مسافات
-        const WHATSAPP_NUMBER = "201000000000";
-        // غير ده بيوزر التليجرام بتاعك من غير @
-        const TELEGRAM_USER = "username";
-
-        function goWhatsapp(product, price) {
-            const msg = "سلام عليكم، عايز اطلب: " + product + " - السعر: " + price;
-            window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg), "_blank");
-        }
-
-        function goTelegram(product, price) {
-            const msg = "سلام عليكم، عايز اطلب: " + product + " - السعر: " + price;
-            window.open("https://t.me/" + TELEGRAM_USER + "?text=" + encodeURIComponent(msg), "_blank");
-        }
-    </script>
-
-</body>
-</html>
+       
