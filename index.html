@@ -22,9 +22,17 @@
             border-bottom: 2px solid #38bdf8;
         }
 
+        .logo-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid #38bdf8;
+            object-fit: cover;
+        }
+
         h1 {
             font-size: 38px;
-            margin: 0;
+            margin: 15px 0 0;
         }
 
         h1 span {
@@ -45,6 +53,12 @@
             padding: 20px;
             border-radius: 15px;
             border: 1px solid #334155;
+        }
+
+        .card-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
         }
 
         .price {
@@ -82,6 +96,9 @@
 <body>
 
     <header>
+
+        <img class="logo-img" src="logo.jpg" alt="BM_ENGINE">
+
         <h1>
             BM_<span>ENGINE</span>
         </h1>
@@ -97,7 +114,9 @@
 
     <!-- المنتج 1 : الكورس -->
     <div class="card">
-        <div style="font-size: 50px;">🎓</div>
+
+        <img class="card-img" src="course.jpg" alt="كورس صنع ملفات ببجي">
+
         <h3>كورس صنع ملفات ببجي</h3>
         <div class="price">350 جنيه</div>
 
@@ -112,7 +131,9 @@
 
     <!-- المنتج 2 : ملفات مدفوعة -->
     <div class="card">
-        <div style="font-size: 50px;">📁</div>
+
+        <img class="card-img" src="files.jpg" alt="ملفات مدفوعة">
+
         <h3>ملفات مدفوعة (عروض)</h3>
         <div class="price">200 جنيه</div>
 
@@ -127,45 +148,8 @@
 
     <!-- المنتج 3 : بحقوقك -->
     <div class="card">
-        <div style="font-size: 50px;">💎</div>
+
+        <img class="card-img" src="rights.jpg" alt="ملفات مدفوعة بحقوقك">
+
         <h3>ملفات مدفوعة بحقوقك</h3>
-        <div class="price">200 جنيه</div>
-
-        <button class="btn btn-whatsapp" onclick="goWhatsapp('ملفات مدفوعة بحقوقك', '200 جنيه')">
-            اطلب واتساب ✅
-        </button>
-
-        <button class="btn btn-telegram" onclick="goTelegram('ملفات مدفوعة بحقوقك', '200 جنيه')">
-            اطلب تليجرام ✈️
-        </button>
-    </div>
-
-    <p>تليجرام: @lib4X</p>
-    <p>© 2026 BM_ENGINE</p>
-
-    <script>
-
-        function makeMessage(productName, productPrice) {
-            return "طلب جديد من BM_ENGINE" + "\n"
-                + "الاسم: " + "\n"
-                + "الموبايل: " + "\n"
-                + "- " + productName + " : " + productPrice + "\n"
-                + "الإجمالي: " + productPrice;
-        }
-
-        function goWhatsapp(productName, productPrice) {
-            var message = makeMessage(productName, productPrice);
-            var link = "https://wa.me/201286473176?text=" + encodeURIComponent(message);
-            window.open(link, "_blank");
-        }
-
-        function goTelegram(productName, productPrice) {
-            var message = makeMessage(productName, productPrice);
-            var link = "https://t.me/lib4X?text=" + encodeURIComponent(message);
-            window.open(link, "_blank");
-        }
-
-    </script>
-
-</body>
-</html>
+        <div class
